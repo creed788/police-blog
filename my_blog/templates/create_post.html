@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block blockname %}{% endblock blockname %}
+{% load static %}
+{% block main-content %}
+<div id="main">
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button>Post</button>
+</form>
+</div>
+
+
+
+  {% endblock main-content %}
